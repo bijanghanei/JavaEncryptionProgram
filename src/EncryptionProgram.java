@@ -28,7 +28,7 @@ public class EncryptionProgram {
     private void start(){
         while(true) {
             System.out.println("***********************************************************");
-            System.out.println("What do yu want me to do?");
+            System.out.println("What do you want me to do?");
             System.out.println("(S)etKey, (G)etKey, (E)ncrypt, (D)ecrypt, (Q)uit");
             char response = Character.toUpperCase(scanner.nextLine().charAt(0));
             switch (response){
@@ -51,6 +51,9 @@ public class EncryptionProgram {
         }
     }
     private void setKey(){
+        text = "";
+        encryptedText = "";
+        decryptedText = "";
         shuffledList = new ArrayList<>(list);
         Collections.shuffle(shuffledList);
         System.out.println("*** New key generated ***");
@@ -60,7 +63,10 @@ public class EncryptionProgram {
 
     }
     private void encrypt(){
-        System.out.println("Write the text that you want tobe encrypted:");
+        text = "";
+        encryptedText = "";
+        decryptedText = "";
+        System.out.println("Write the text that you want to be encrypted:");
         String text = scanner.nextLine();
         for(int i = 0; i< text.length(); i++){
             for (int j = 0; j<list.size(); j++){
