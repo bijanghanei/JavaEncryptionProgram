@@ -26,6 +26,7 @@ public class EncryptionProgram {
         start();
     }
     private void start(){
+
         while(true) {
             System.out.println("***********************************************************");
             System.out.println("What do you want me to do?");
